@@ -5,8 +5,8 @@ import LayoutNav from './components/LayoutNav.vue'
 </script>
 <template>
     <div>
-        <LayoutHeader />
         <LayoutNav />
+        <LayoutHeader />
         <router-view />
         <LayoutFooter />
     </div>
