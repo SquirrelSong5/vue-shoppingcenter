@@ -16,7 +16,7 @@ const categoryStore = useCategoryStore()
       <!-- 导航栏，当分类列表存在时显示 -->
       <ul class="app-header-nav" v-if="categoryStore.categoryList.length">
         <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-          <RouterLink :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
+          <RouterLink active-class="active" :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
         </li>
       </ul>
       <!-- 搜索框区域 -->
