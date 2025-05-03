@@ -21,7 +21,7 @@ onMounted(() => {
         <LayoutFixed />
         <LayoutNav />
         <LayoutHeader />
-        <router-view />
+        <router-view :key="$route.fullPath" />
         <LayoutFooter />
     </div>
 </template>
