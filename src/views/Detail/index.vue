@@ -3,8 +3,6 @@ import { getDetail } from '@/apis/detail'
 import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import DetailHot from './components/DetailHot.vue'
-import ImagePreview from './components/ImagePreview.vue'
-import XtxSku from '@/components/XtxSku/index.vue'
 
 
 const route = useRoute()
