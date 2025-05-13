@@ -20,6 +20,11 @@ const routes = [
         path: 'category/:id',
         name: 'Category',
         component: Category
+      },
+      {
+        path: 'category/sub/:id',
+        name: 'SubCategory',
+        component: Category
       }
       ]
   },
