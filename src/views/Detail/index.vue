@@ -5,6 +5,8 @@ import { useRoute } from 'vue-router'
 import DetailHot from './components/DetailHot.vue'
 import ImagePreview from './components/ImagePreview.vue'
 
+
+
 const route = useRoute()
 const goods = ref({})
 const getGoods = async () => {
@@ -23,15 +25,15 @@ onMounted(() => getGoods())
                 <el-breadcrumb separator=">">
                     <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
 
-                    <el-breadcrumb-item :to="{ path: '`/category/${goods.categories[1].id}`' }">
+                    <el-breadcrumb-item :to="{ path: `/category/${goods.categories[1].id}` }">
                         {{ goods.categories[1].name }}
                     </el-breadcrumb-item>
 
-                    <el-breadcrumb-item :to="{ path: '`/category/sub/${goods.categories[0].id}`' }">
+                    <el-breadcrumb-item :to="{ path: `/category/sub/${goods.categories[0].id}` }">
                         {{ goods.categories[0].name }}
                     </el-breadcrumb-item>
 
-                    <el-breadcrumb-item>抓绒保暖，毛毛虫子儿童运动鞋</el-breadcrumb-item>
+                    <el-breadcrumb-item>{{ goods.name }}</el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <!-- 商品信息 -->
@@ -40,7 +42,7 @@ onMounted(() => getGoods())
                     <div class="goods-info">
                         <div class="media">
                             <!-- 图片预览区 -->
-                            <ImagePreview />
+                            <ImagePreview :image-list="goods.mainPictures" />
                             <!-- 统计数量 -->
                             <ul class="goods-sales">
                                 <li>
