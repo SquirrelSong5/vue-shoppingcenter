@@ -3,6 +3,7 @@ import Login from '@/views/Login/index.vue'
 import Layout from '@/views/Layout/index.vue'
 import Home from '@/views/Home/index.vue'
 import Category from '@/views/Category/index.vue'
+import SubCategory from '@/views/SubCategory/index.vue'
 
 
 const routes = [
@@ -13,24 +14,20 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'Home',
         component: Home
       },
       {
         path: 'category/:id',
-        name: 'Category',
         component: Category
       },
       {
         path: 'category/sub/:id',
-        name: 'SubCategory',
-        component: Category
+        component: SubCategory
       }
       ]
   },
   {
     path: '/login',
-    name: 'Login',
     component: Login
   }
   

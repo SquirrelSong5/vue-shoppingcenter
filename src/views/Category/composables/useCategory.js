@@ -21,5 +21,5 @@ export function useCategory() {
 
     return {
         categoryData
-        }
+    }
 }
