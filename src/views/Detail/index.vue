@@ -4,7 +4,6 @@ import { onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import DetailHot from './components/DetailHot.vue'
 
-
 const route = useRoute()
 const goods = ref({})
 const getGoods = async () => {
